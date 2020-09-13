@@ -56,6 +56,13 @@
 	"content": " .error { color: orange; }   Policy Compiler     P2SH P2WSH P2SH-P2WSH    Map every alias to an existing key or generate a new one. You can also specify known keys directly in the visual editor or the policy input field.       Wallet    Descriptor   Change Descriptor (optional)          This page contains webassembly and javascript content, please enable javascript in your browser.   let compilerKeyAliasIndex = 0; function htmlToElement(html) { var template = document.createElement('template'); html = html.trim(); template.innerHTML = html; return template.content.firstChild; } function addCompilerKeyAlias(e) { if (e) { e.preventDefault(); } const newIndex = ++compilerKeyAliasIndex; const html = ` Generate WIF Key Generate Extended Key Existing Key   `; const prevAddBtn = document.getElementById('add_key_alias'); if (prevAddBtn) { prevAddBtn.remove(); } document.getElementById('compiler_aliases').appendChild(htmlToElement(html)); } function updateCompilerFormAlias(e) { const extraInput = Array.from(document.getElementsByName('extra')).filter((x) = x.attributes[\"data-index\"].value == e.attributes[\"data-index\"].value)[0]; switch (e.value) { case 'gen_wif': extraInput.style.display = 'none'; break; case 'gen_ext': extraInput.style.display = 'inherit'; extraInput.placeholder = \"Derivation Path (optional). Example: /44'/0'/0'/0/*\"; break; case 'existing': extraInput.style.display = 'inherit'; extraInput.placeholder = \"WIF, tpub or hex public key. Example: 02e96fe52ef0e22d2f131dd425ce1893073a3c6ad20e8cac36726393dfb4856a4c\"; break; } } (() = { addCompilerKeyAlias(); })();  "
 },
 {
+	"uri": "https://test.bitcoindevkit.org/supporters/",
+	"title": "Supporters",
+	"tags": [],
+	"description": "",
+	"content": "The Bitcoin Dev Kit project is proudly supported by:\nBitfinex   Square Crypto    "
+},
+{
 	"uri": "https://test.bitcoindevkit.org/",
 	"title": "Home",
 	"tags": [],

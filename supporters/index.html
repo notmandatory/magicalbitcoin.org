@@ -15,7 +15,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
-    <title>Regtest :: Bitcoin Dev Kit</title>
+    <title>Supporters :: Bitcoin Dev Kit</title>
 
     
     <link href="/css/nucleus.css?1599976376" rel="stylesheet">
@@ -42,7 +42,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/repl/regtest/">
+  <body class="" data-url="/supporters/">
     <nav id="sidebar" class="">
 
 
@@ -87,7 +87,7 @@
   
     
     <li data-nav-id="/repl/" title="REPL" class="dd-item 
-        parent
+        
         
         
         ">
@@ -176,7 +176,7 @@
  
   
     
-      <li data-nav-id="/repl/regtest/" title="Regtest" class="dd-item active">
+      <li data-nav-id="/repl/regtest/" title="Regtest" class="dd-item ">
         <a href="/repl/regtest/">
         <b>4. </b>Regtest
         
@@ -271,8 +271,8 @@
   
     
     <li data-nav-id="/supporters/" title="Supporters" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/supporters/">
@@ -346,7 +346,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/bitcoindevkit/bitcoindevkit.org/edit/master/content/repl/regtest.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bitcoindevkit/bitcoindevkit.org/edit/master/content/Supporters/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -366,23 +366,14 @@
                   <span class="links">
                  
                  
-                   Regtest
+                   Supporters
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#troubleshooting">Troubleshooting</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#bonus-docker">Bonus: Docker</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -398,36 +389,37 @@
           
             <h1>
               
-              Regtest
+              Supporters
             </h1>
           
 
         
 
 
-<p>Running the REPL in regtest requires having a local Electrum server set-up. There are two main implementations, <a href="https://github.com/romanz/electrs"><code>electrs</code></a> in Rust and <a href="https://github.com/spesmilo/electrumx"><code>ElectrumX</code></a> in Python. Since the Rust toolchain is already required to
-use BDK, this page will focus mostly on the former.</p>
-<p>Electrs can be installed by running:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cargo install --git https://github.com/romanz/electrs --bin electrs
-</code></pre></div><p>Just like before, this command will probably take a while to finish.</p>
-<p>Once it&rsquo;s done, assuming you have a regtest bitcoind running in background, you can launch a new terminal and run the following command to actually start electrs:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">electrs -vv --timestamp --db-dir /tmp/electrs-db --electrum-rpc-addr<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;127.0.0.1:50001&#34;</span> --network<span style="color:#f92672">=</span>regtest --cookie-file<span style="color:#f92672">=</span>$HOME/.bitcoin/regtest/.cookie
-</code></pre></div><p>on macOS you should change the cookie-file to <code>$HOME/Library/Application Support/Bitcoin/regtest/.cookie</code>.</p>
-<p>This will start the Electrum server on port 50001. You can then add the <code>-n regtest -s localhost:50001</code> the <code>bdk</code> commands to switch to the local regtest.</p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<h4 id="stuck-with-wait-until-bitcoind-is-synced-ie-initialblockdownload--false">Stuck with &ldquo;<em>wait until bitcoind is synced (i.e. initialblockdownload = false)</em>&rdquo;</h4>
-<p>Just generate a few blocks with <code>bitcoin-cli generatetoaddress 1 &lt;address&gt;</code></p>
-<h2 id="bonus-docker">Bonus: Docker</h2>
-<p>If you have already installed Docker on your machine, you can also use 🍣 <a href="https://github.com/vulpemventures/nigiri">Nigiri CLI</a> to spin-up a complete development environment in <code>regtest</code> that includes a <code>bitcoin</code> node, an <code>electrs</code> explorer and the <a href="https://github.com/blockstream/esplora"><code>esplora</code></a> web-app to visualize blocks and transactions in the browser.</p>
-<p>Install 🍣 Nigiri</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl https://getnigiri.vulpem.com | bash
-</code></pre></div><p>Start Docker daemon and run Nigiri box</p>
-<pre><code>$ nigiri start
-</code></pre><p>This will start electrum RPC interface on port <code>51401</code>, the REST interface on <code>3000</code> and the esplora UI on <code>5000</code> (You can visit with the browser and look for blocks, addresses and transactions)</p>
-<p>You can then add the <code>-n regtest -s localhost:51401</code> to the <code>magic</code> commands to switch to the local regtest.</p>
+
+	<p>The Bitcoin Dev Kit project is proudly supported by:</p>
+
+<div class="row justify-content-left supporters">
+    <div class="p-3">
+        <a href="https://www.bitfinex.com/" target="_blank" class="small">
+            <img src="/images/bitfinex.svg" style="width: 75px" alt="Sponsor Bitfinex">
+            <div>Bitfinex</div>
+        </a>
+    </div>
+    <div class="p-3">
+        <a href="https://twitter.com/sqcrypto" target="_blank" class="small">
+            <img src="/images/squarecrypto.svg" style="width: 75px" alt="Sponsor Square Crypto">
+            <div>Square Crypto</div>
+        </a>
+    </div>
+</div>
 
 
-<footer class="footline">
+
+
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -462,20 +454,6 @@ use BDK, this page will focus mostly on the former.</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -486,9 +464,6 @@ use BDK, this page will focus mostly on the former.</p>
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -527,7 +502,6 @@ use BDK, this page will focus mostly on the former.</p>
             
                 
                     
-                    
                 
                 
 
@@ -544,8 +518,21 @@ use BDK, this page will focus mostly on the former.</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -597,6 +584,7 @@ use BDK, this page will focus mostly on the former.</p>
             
             
                 
+                    
                     
                 
                 
@@ -647,4 +635,3 @@ use BDK, this page will focus mostly on the former.</p>
 
   </body>
 </html>
-
