@@ -37,7 +37,7 @@ BDK is aiming first of all to be a set of libraries and tools, all meant to be v
       <pubDate>Tue, 28 Apr 2020 18:20:28 +0200</pubDate>
       
       <guid>https://test.bitcoindevkit.org/repl/interface/</guid>
-      <description>Remember the magic --help command you ran before? Let&amp;rsquo;s analyze its output here to figure out the interface:
+      <description>Remember the repl --help command you ran before? Let&amp;rsquo;s analyze its output here to figure out the interface:
 Flags FLAGS: -h, --help Prints help information -v Sets the level of verbosity -V, --version Prints version information These are the optional flags that can be set with every command. The -h flag prints the help message, the -V flag only prints the version and the -v is actually ignored at the moment.</description>
     </item>
     
