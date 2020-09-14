@@ -18,21 +18,21 @@
     <title>Concept :: Bitcoin Dev Kit</title>
 
     
-    <link href="/css/nucleus.css?1600117613" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1600117613" rel="stylesheet">
-    <link href="/css/hybrid.css?1600117613" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1600117613" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1600117613" rel="stylesheet">
-    <link href="/css/auto-complete.css?1600117613" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1600117613" rel="stylesheet">
-    <link href="/css/theme.css?1600117613" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1600117613" rel="stylesheet">
+    <link href="/css/nucleus.css?1600122965" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1600122965" rel="stylesheet">
+    <link href="/css/hybrid.css?1600122965" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1600122965" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1600122965" rel="stylesheet">
+    <link href="/css/auto-complete.css?1600122965" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1600122965" rel="stylesheet">
+    <link href="/css/theme.css?1600122965" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1600122965" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1600117613" rel="stylesheet">
+    <link href="/css/theme-blue.css?1600122965" rel="stylesheet">
     
-    <link href="/css/style.css?1600117613" rel="stylesheet"><link href="/css/jsonview.css?1600117613" rel="stylesheet">
+    <link href="/css/style.css?1600122965" rel="stylesheet"><link href="/css/jsonview.css?1600122965" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1600117613"></script>
+    <script src="/js/jquery-3.3.1.min.js?1600122965"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1600117613"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1600117613"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1600122965"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1600122965"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/test.bitcoindevkit.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1600117613"></script>
+<script type="text/javascript" src="/js/search.js?1600122965"></script>
 
     
   </div>
@@ -403,7 +403,7 @@ Bitcoin can pick the tools they need and piece them together to prototype and qu
 APIs exposed by the various components of the library, <strong>not a full, end-user-ready Bitcoin wallet</strong>.</p>
 <p>This concept leads to a few design choices that are arguably very bad for the &ldquo;UX&rdquo; of this wallet, but that allow developers to work more directly with the underlying library. For instance:</p>
 <ul>
-<li>BDK has an internal database that&rsquo;s used to store data about received transactions, spendable UTXOs, etc. This database is stored by default in your home folder, in <code>~/.bdk</code>. The database
+<li>BDK has an internal database that&rsquo;s used to store data about received transactions, spendable UTXOs, etc. This database is stored by default in your home folder, in <code>~/.bdk-bitcoin</code>. The database
 <strong>will never</strong> contain any data that can&rsquo;t be recreated purely by looking at the blockchain. Keys, descriptors, Electrum endpoints <strong>are not stored in there</strong>. This explains why you&rsquo;ll have to specify them every
 time in the command line. It can be seen more like a <em>cache</em> and can be safely deleted without risking funds.</li>
 <li>BDK doesn&rsquo;t automatically &ldquo;monitor&rdquo; the blockchain, instead there&rsquo;s a <code>sync</code> command that has to be called by the user.</li>
@@ -611,19 +611,19 @@ to understand, and that&rsquo;s absolutely normal. Just try to survive through t
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1600117613"></script>
-    <script src="/js/perfect-scrollbar.min.js?1600117613"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1600117613"></script>
-    <script src="/js/jquery.sticky.js?1600117613"></script>
-    <script src="/js/featherlight.min.js?1600117613"></script>
-    <script src="/js/highlight.pack.js?1600117613"></script>
+    <script src="/js/clipboard.min.js?1600122965"></script>
+    <script src="/js/perfect-scrollbar.min.js?1600122965"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1600122965"></script>
+    <script src="/js/jquery.sticky.js?1600122965"></script>
+    <script src="/js/featherlight.min.js?1600122965"></script>
+    <script src="/js/highlight.pack.js?1600122965"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1600117613"></script>
-    <script src="/js/learn.js?1600117613"></script>
-    <script src="/js/hugo-learn.js?1600117613"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1600122965"></script>
+    <script src="/js/learn.js?1600122965"></script>
+    <script src="/js/hugo-learn.js?1600122965"></script>
     
         
-            <script src="/mermaid/mermaid.js?1600117613"></script>
+            <script src="/mermaid/mermaid.js?1600122965"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
